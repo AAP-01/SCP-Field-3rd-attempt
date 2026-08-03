@@ -1,8 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://4syo3aihnykw"]
+[gd_scene load_steps=5 format=3 uid="uid://4syo3aihnykw"]
 
 [ext_resource type="PackedScene" uid="uid://1opuuogli1ml" path="res://Scenes/player_character.tscn" id="1_l756w"]
+[ext_resource type="PackedScene" uid="uid://b0vopr68oqiq4" path="res://Scenes/extraction_point.tscn" id="2_0e3vx"]
+[ext_resource type="Texture2D" uid="uid://dxd8rhatcrkp2" path="res://icon.svg" id="3_6j5ir"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mgc0q"]
+size = Vector2(220, 220)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_l756w")]
-position = Vector2(563, 307)
+[node name="Extraction Point" parent="." instance=ExtResource("2_0e3vx")]
+position = Vector2(1017, 517)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Extraction Point"]
+shape = SubResource("RectangleShape2D_mgc0q")
+
+[node name="Sprite2D" type="Sprite2D" parent="Extraction Point"]
+scale = Vector2(1.71875, 1.71875)
+texture = ExtResource("3_6j5ir")
+
+[node name="Player" parent="." instance=ExtResource("1_l756w")]
+position = Vector2(70, 74)

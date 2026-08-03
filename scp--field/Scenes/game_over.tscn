@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bes8fpojjc84e"]
+
+[node name="Game Over" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41300002
+anchor_top = 0.423
+anchor_right = 0.587
+anchor_bottom = 0.577
+offset_left = 0.2239685
+offset_top = -0.104003906
+offset_right = -0.22399902
+offset_bottom = 0.10397339
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "You escaped!
+OR
+You died..."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.43500003
+anchor_top = 0.63000005
+anchor_right = 0.56200004
+anchor_bottom = 0.68500006
+offset_left = -0.120025635
+offset_top = -0.24002075
+offset_right = -0.42407227
+offset_bottom = 0.1199646
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Restart" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Restart"
+
+[node name="Menu" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Menu"

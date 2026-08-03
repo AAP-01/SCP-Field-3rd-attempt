@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0vopr68oqiq4"]
+
+[ext_resource type="Script" uid="uid://uwtpm0barmgf" path="res://Scripts/extraction_point.gd" id="1_t02tp"]
+
+[node name="Extraction Point" type="Area2D"]
+script = ExtResource("1_t02tp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
