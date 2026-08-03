@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="FieldCodeData" load_steps=2 format=3 uid="uid://bciut78clpvke"]
+
+[ext_resource type="Script" uid="uid://bll7cnu5aggj" path="res://Resources/field_codes.gd" id="1_sxy3r"]
+
+[resource]
+script = ExtResource("1_sxy3r")
+metadata/_custom_type_script = "uid://bll7cnu5aggj"
