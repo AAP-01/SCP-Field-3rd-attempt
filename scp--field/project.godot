@@ -15,6 +15,11 @@ run/main_scene="uid://4syo3aihnykw"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SingletonGameStats="*res://Scripts/singleton_game_stats.gd"
+SingletonPlayerStats="*res://Scripts/singleton_player_stats.gd"
+
 [input]
 
 "Move up"={

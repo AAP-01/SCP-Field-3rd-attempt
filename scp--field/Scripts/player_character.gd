@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const WALK_SPEED = 150.0
-const SPRINT_SPEED = 250.0
+var walk_speed : float = SingletonPlayerStats.walk_speed
+var sprint_speed : float = SingletonPlayerStats.sprint_speed
 
 func _physics_process(delta: float) -> void:
 	process_movement()
@@ -13,6 +13,6 @@ func process_movement() -> void:
 	var direction := Input.get_vector("Move left", "Move right", "Move up", "Move down")	# Essentially gets the direction the player is oriented
 	
 	if Input.is_action_pressed("Sprint"):
-		velocity = direction * SPRINT_SPEED	# Sets the player's movement
+		velocity = direction * sprint_speed	# Sets the player's movement
 	else:
-		velocity = direction * WALK_SPEED	# Sets the player's movement
+		velocity = direction * walk_speed	# Sets the player's movement
