@@ -1,7 +1,7 @@
 extends Node
 class_name PlayerStats
 
-var health : float = 100.00
+var health : float = 100.0
 var ammunition : int = 120
-var walk_speed : float = 150.00
-var sprint_speed : float = 250.00
+var walk_speed : float = 150.0
+var sprint_speed : float = 250.0
