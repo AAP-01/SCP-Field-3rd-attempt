@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://uwtpm0barmgf" path="res://Scripts/extraction_point.gd" id="1_t02tp"]
 
-[node name="Extraction Point" type="Area2D"]
+[node name="Extraction Point" type="Area2D" groups=["Interactibles"]]
 script = ExtResource("1_t02tp")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

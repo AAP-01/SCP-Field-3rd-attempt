@@ -3,6 +3,7 @@ extends Area2D
 func _on_body_entered(body: Node2D) -> void:	# This triggers when something hits this
 	# Add a future mechanic here that shows the player a prompt to extract
 	if body.name == "Player":
+		print("Reached extraction point")
 		bring_to_game_over()
 		
 func bring_to_game_over() -> void:

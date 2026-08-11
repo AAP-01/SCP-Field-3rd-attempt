@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgdrdhh7oyfmg"]
+
+[ext_resource type="Script" uid="uid://begtosqrs2n2h" path="res://Scripts/scp_field_code.gd" id="1_4ugh5"]
+
+[node name="SCP Field Code" type="Area2D" groups=["Interactibles"]]
+script = ExtResource("1_4ugh5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -3,6 +3,10 @@ extends CharacterBody2D
 var walk_speed : float = SingletonPlayerStats.walk_speed
 var sprint_speed : float = SingletonPlayerStats.sprint_speed
 
+func _ready() -> void:
+	for i in get_tree().get_nodes_in_group("Interactibles"):
+		print(i.name)
+
 func _physics_process(delta: float) -> void:
 	process_movement(delta)
 	move_and_slide()	# Executes the player's movement (uses the velocity variable)
