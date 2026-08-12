@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 var walk_speed : float = SingletonPlayerStats.walk_speed
 var sprint_speed : float = SingletonPlayerStats.sprint_speed
+var current_interactible : Area2D = null
 
 func _ready() -> void:
 	for i in get_tree().get_nodes_in_group("Interactibles"):
@@ -10,6 +11,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	process_movement(delta)
 	move_and_slide()	# Executes the player's movement (uses the velocity variable)
+	interact()
 
 func process_movement(delta : float) -> void:
 	# Gravity
@@ -23,3 +25,8 @@ func process_movement(delta : float) -> void:
 		velocity.x = direction * sprint_speed	# Sets the player's movement
 	else:
 		velocity.x = direction * walk_speed	# Sets the player's movement
+		
+func interact() -> void:
+	if SingletonGameStats.in_interactible_zone:
+		if Input.is_action_just_pressed("Interact"):
+			current_interactible.interact()
