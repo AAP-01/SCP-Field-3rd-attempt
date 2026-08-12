@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://4syo3aihnykw"]
+[gd_scene load_steps=10 format=3 uid="uid://4syo3aihnykw"]
 
 [ext_resource type="PackedScene" uid="uid://1opuuogli1ml" path="res://Scenes/player_character.tscn" id="1_l756w"]
 [ext_resource type="PackedScene" uid="uid://b0vopr68oqiq4" path="res://Scenes/extraction_point.tscn" id="2_0e3vx"]
+[ext_resource type="PackedScene" uid="uid://dtc8fhsiepuk7" path="res://Scenes/interact_prompt.tscn" id="3_mgc0q"]
 [ext_resource type="Texture2D" uid="uid://dvo5lxabac3e3" path="res://Assets/Barriers/Starter Tiles Platformer/DarkCastle.png" id="4_6j5ir"]
 [ext_resource type="PackedScene" uid="uid://dgdrdhh7oyfmg" path="res://Scenes/scp_field_code.tscn" id="4_mgc0q"]
 
@@ -58,6 +59,9 @@ position = Vector2(920, 600)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Extraction Point"]
 shape = SubResource("RectangleShape2D_mgc0q")
+
+[node name="Interact Prompt" parent="Extraction Point" instance=ExtResource("3_mgc0q")]
+position = Vector2(0, 5)
 
 [node name="Player" parent="." instance=ExtResource("1_l756w")]
 position = Vector2(24, 609)

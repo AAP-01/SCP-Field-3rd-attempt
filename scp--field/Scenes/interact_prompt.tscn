@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtc8fhsiepuk7"]
+
+[ext_resource type="Texture2D" uid="uid://dxd8rhatcrkp2" path="res://icon.svg" id="1_2qdse"]
+
+[node name="Interact Prompt" type="Node2D"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1875, 0.09375)
+texture = ExtResource("1_2qdse")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.90625
+offset_top = -2.5
+offset_right = 13.90625
+offset_bottom = 2.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 3
+text = "Press E to interact"
+horizontal_alignment = 1
+autowrap_mode = 3
