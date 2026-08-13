@@ -3,7 +3,6 @@ extends Area2D
 @onready var interact_prompt: Node2D = $"Interact Prompt"
 
 func _on_body_entered(body: Node2D) -> void:	# This triggers when something hits this
-	# Add a future mechanic here that shows the player a prompt to extract
 	if body.name == "Player":
 		body.current_interactible = self
 		print("Reached extraction point")

@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 SingletonGameStats="*res://Scripts/singleton_game_stats.gd"
 SingletonPlayerStats="*res://Scripts/singleton_player_stats.gd"
+SingletonEnums="*res://Scripts/singleton_enums.gd"
 
 [input]
 

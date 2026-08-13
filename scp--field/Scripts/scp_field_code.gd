@@ -10,8 +10,8 @@ func setup(field_code : FieldCodeData) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		print("Found a field code")
 		body.current_interactible = self
+		print("Found a field code")
 		show_prompt()
 		
 func _on_body_exited(body: Node2D) -> void:

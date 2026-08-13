@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1regn3utjhsi"]
+
+[ext_resource type="Script" uid="uid://8ul2e64air0e" path="res://Scripts/area.gd" id="1_o88qo"]
+
+[node name="Area" type="Area2D"]
+script = ExtResource("1_o88qo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
