@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="FieldCodeData" load_steps=2 format=3 uid="uid://c76lfptkgh85h"]
 
-[ext_resource type="Script" uid="uid://bll7cnu5aggj" path="res://Resources/field_codes.gd" id="1_b8lrs"]
+[ext_resource type="Script" uid="uid://bll7cnu5aggj" path="res://Resources/resource_field_codes.gd" id="1_b8lrs"]
 
 [resource]
 script = ExtResource("1_b8lrs")

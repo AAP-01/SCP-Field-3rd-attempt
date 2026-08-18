@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ThreatData" load_steps=2 format=3 uid="uid://b2qp178l3yblb"]
+
+[ext_resource type="Script" uid="uid://pbh3fclkuvua" path="res://Resources/resource_threats.gd" id="1_jvtu8"]
+
+[resource]
+script = ExtResource("1_jvtu8")
+metadata/_custom_type_script = "uid://pbh3fclkuvua"
