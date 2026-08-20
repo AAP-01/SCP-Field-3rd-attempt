@@ -2,4 +2,6 @@ extends Node
 
 class_name ThreatList
 
-var list : Array
+var list : Array = [
+	preload("res://Threats/darkness.tres")
+]

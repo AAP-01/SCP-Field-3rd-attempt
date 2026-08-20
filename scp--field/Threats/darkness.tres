@@ -1,7 +1,14 @@
-[gd_resource type="Resource" script_class="ThreatData" load_steps=2 format=3 uid="uid://b2qp178l3yblb"]
+[gd_resource type="Resource" script_class="ThreatData" load_steps=3 format=3 uid="uid://b2qp178l3yblb"]
 
 [ext_resource type="Script" uid="uid://pbh3fclkuvua" path="res://Resources/resource_threats.gd" id="1_jvtu8"]
+[ext_resource type="Script" uid="uid://bll7cnu5aggj" path="res://Resources/resource_field_codes.gd" id="1_ri3bu"]
 
 [resource]
 script = ExtResource("1_jvtu8")
+threat_class = 1
+name = "Darkness"
+health = 9.223372e+18
+is_invulnerable = true
+attack_speed = 1.0
+damage = 10.0
 metadata/_custom_type_script = "uid://pbh3fclkuvua"
