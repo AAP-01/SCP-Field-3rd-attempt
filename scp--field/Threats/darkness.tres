@@ -1,7 +1,12 @@
-[gd_resource type="Resource" script_class="ThreatData" load_steps=3 format=3 uid="uid://b2qp178l3yblb"]
+[gd_resource type="Resource" script_class="ThreatData" load_steps=8 format=3 uid="uid://b2qp178l3yblb"]
 
 [ext_resource type="Script" uid="uid://pbh3fclkuvua" path="res://Resources/resource_threats.gd" id="1_jvtu8"]
 [ext_resource type="Script" uid="uid://bll7cnu5aggj" path="res://Resources/resource_field_codes.gd" id="1_ri3bu"]
+[ext_resource type="Resource" uid="uid://mah3wjq0rbam" path="res://Field codes/cannot_be_damaged.tres" id="2_ebhiq"]
+[ext_resource type="Resource" uid="uid://h6adferc6qy5" path="res://Field codes/guns_are_no_good.tres" id="3_8pwbw"]
+[ext_resource type="Resource" uid="uid://c76lfptkgh85h" path="res://Field codes/space_distance_distortion.tres" id="4_vo51d"]
+[ext_resource type="Resource" uid="uid://bciut78clpvke" path="res://Field codes/stay_in_the_light.tres" id="5_kltk1"]
+[ext_resource type="Resource" uid="uid://cxk7mhx8u8hdh" path="res://Field codes/team_member_vanished_here.tres" id="6_fu2rj"]
 
 [resource]
 script = ExtResource("1_jvtu8")
@@ -11,4 +16,5 @@ health = 9.223372e+18
 is_invulnerable = true
 attack_speed = 1.0
 damage = 10.0
+field_codes = Array[ExtResource("1_ri3bu")]([ExtResource("2_ebhiq"), ExtResource("3_8pwbw"), ExtResource("4_vo51d"), ExtResource("5_kltk1"), ExtResource("6_fu2rj")])
 metadata/_custom_type_script = "uid://pbh3fclkuvua"

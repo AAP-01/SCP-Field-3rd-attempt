@@ -4,4 +4,5 @@
 
 [resource]
 script = ExtResource("1_m0r5p")
+name = "Guns are no Good"
 metadata/_custom_type_script = "uid://bll7cnu5aggj"

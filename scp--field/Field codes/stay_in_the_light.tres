@@ -4,4 +4,5 @@
 
 [resource]
 script = ExtResource("1_sxy3r")
+name = "Stay in the Light"
 metadata/_custom_type_script = "uid://bll7cnu5aggj"

@@ -4,4 +4,5 @@
 
 [resource]
 script = ExtResource("1_fgbi2")
+name = "Team Member Vanished here"
 metadata/_custom_type_script = "uid://bll7cnu5aggj"
