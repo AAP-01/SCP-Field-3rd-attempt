@@ -4,15 +4,20 @@ class_name GameStats
 
 var win : bool = false
 var in_interactible_zone : bool = false
-var threat_list : Array[ThreatData]
-var field_code_list : Array[FieldCodeData]
-var area_list : Array[Area2D]
-
-@onready var areas: Node = $Areas	# The script can't find this node fix it
+var threat_list : Array[ThreatData]	# Threats inserted in the game
+var field_code_list : Array[FieldCodeData]	# Field codes from the threat inserted into the game
+var area_list : Array[Area2D]	# Areas in the game
 
 func _ready() -> void:
-	add_areas_to_list()
+	pass
 
 func add_areas_to_list() -> void:	# Keeps track of all areas in the map
-	for child in areas.get_children():
-		area_list.append(child)
+	if area_list.is_empty():
+		print("Nothing added")
+	else:
+		for child in area_list:
+			print(child.name)
+
+func add_field_codes_to_list() -> void:
+	for child in field_code_list:
+		print(child.name)

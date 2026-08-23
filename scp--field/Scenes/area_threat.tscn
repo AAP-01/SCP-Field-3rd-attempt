@@ -1,10 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://yksripgtgllx"]
+[gd_scene load_steps=4 format=3 uid="uid://yksripgtgllx"]
 
 [ext_resource type="Script" uid="uid://ctu8wppe0sh77" path="res://Scripts/area_threat.gd" id="1_kiac6"]
+[ext_resource type="Texture2D" uid="uid://dxd8rhatcrkp2" path="res://icon.svg" id="2_em78d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kiac6"]
 
 [node name="Area Threat" type="Area2D"]
 script = ExtResource("1_kiac6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.9073486e-06, -4.7683716e-07)
+scale = Vector2(0.31249997, 0.23437499)
+texture = ExtResource("2_em78d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_kiac6")
+debug_color = Color(0.6484504, 0.52089566, 0, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
