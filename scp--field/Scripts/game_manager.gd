@@ -15,7 +15,7 @@ func _ready() -> void:
 	for area in areas_parent.get_children():
 		area_list.append(area)
 		
-	field_code_amount = 1
+	field_code_amount = 3
 	select_threat()
 	setup_threat()
 # =====================================================================================================================================================================
@@ -24,13 +24,13 @@ func select_threat() -> void:	# Select the ThreatData resource
 		threat_list.append(SingletonThreatList.list[randi_range(0, SingletonThreatList.list.size() - 1)])	# Only adds the resource
 	
 func setup_threat() -> void:	# Spawn the Threat scene
-	for threat in threat_list:
+	for threat in threat_list:	# To fix: CollisionSHape2D are sized wrong if there are multiple threats spawning
 		var spawn_area = select_spawn_area()
 		print(spawn_area.name)
 		
 		match threat.threat_class:
 			SingletonEnums.ThreatClass.MOBILE_THREAT:
-				var mobile_threat = AREA_THREAT.instantiate()	# Create an instance in memory
+				var mobile_threat = AREA_THREAT.instantiate()	# Create an instance in memory (CHANGE TO MOBILE_THREAT WHEN THE CLASS IS ADDED)
 				add_child(mobile_threat)	# Spawn the threat in the scene
 				setup_mobile_threat_position(mobile_threat, spawn_area)	# Set the position
 				
@@ -52,9 +52,11 @@ func select_spawn_area() -> Area2D:
 	return spawn_area
 	
 func setup_area_threat_size(area_threat : Area2D, spawn_area : Area2D) -> void:
-	var area_threat_shape = area_threat.get_node("CollisionShape2D").shape
+	var new_area_shape = area_threat.get_node("CollisionShape2D").shape.duplicate()	# Gotta duplicate it because it's a shared resource
 	var spawn_area_shape = spawn_area.get_node("CollisionShape2D").shape
-	area_threat_shape.extents = spawn_area_shape.extents
+	
+	new_area_shape.extents = spawn_area_shape.extents
+	area_threat.get_node("CollisionShape2D").shape = new_area_shape	# The spawned area threat gets its unique CollisionShape2D
 	
 func setup_mobile_threat_position(mobile_threat : Area2D, spawn_area : Area2D) -> void:
 	mobile_threat.position = spawn_area.position
