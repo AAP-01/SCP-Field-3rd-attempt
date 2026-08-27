@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="FieldCodeData" load_steps=2 format=3 uid="uid://cxk7mhx8u8hdh"]
+[gd_resource type="Resource" script_class="FieldCodeData" load_steps=3 format=3 uid="uid://cxk7mhx8u8hdh"]
 
 [ext_resource type="Script" uid="uid://bll7cnu5aggj" path="res://Resources/resource_field_codes.gd" id="1_fgbi2"]
+[ext_resource type="Texture2D" uid="uid://djlndn5e283ae" path="res://Assets/Field codes/Team member vanished here SPRITE.png" id="1_iccrv"]
 
 [resource]
 script = ExtResource("1_fgbi2")
 name = "Team Member Vanished here"
+field_code_icon = ExtResource("1_iccrv")
 metadata/_custom_type_script = "uid://bll7cnu5aggj"

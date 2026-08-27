@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="FieldCodeData" load_steps=2 format=3 uid="uid://bciut78clpvke"]
+[gd_resource type="Resource" script_class="FieldCodeData" load_steps=3 format=3 uid="uid://bciut78clpvke"]
 
+[ext_resource type="Texture2D" uid="uid://dn4ky07b8d2as" path="res://Assets/Field codes/Stay in the light SPRITE.png" id="1_fmdrh"]
 [ext_resource type="Script" uid="uid://bll7cnu5aggj" path="res://Resources/resource_field_codes.gd" id="1_sxy3r"]
 
 [resource]
 script = ExtResource("1_sxy3r")
 name = "Stay in the Light"
+field_code_icon = ExtResource("1_fmdrh")
 metadata/_custom_type_script = "uid://bll7cnu5aggj"

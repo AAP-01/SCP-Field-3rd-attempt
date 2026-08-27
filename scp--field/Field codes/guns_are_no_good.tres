@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="FieldCodeData" load_steps=2 format=3 uid="uid://h6adferc6qy5"]
+[gd_resource type="Resource" script_class="FieldCodeData" load_steps=3 format=3 uid="uid://h6adferc6qy5"]
 
+[ext_resource type="Texture2D" uid="uid://dm55d6181vbdb" path="res://Assets/Field codes/Guns are no good here SPRITE.png" id="1_h3ead"]
 [ext_resource type="Script" uid="uid://bll7cnu5aggj" path="res://Resources/resource_field_codes.gd" id="1_m0r5p"]
 
 [resource]
 script = ExtResource("1_m0r5p")
 name = "Guns are no Good"
+field_code_icon = ExtResource("1_h3ead")
 metadata/_custom_type_script = "uid://bll7cnu5aggj"

@@ -4,12 +4,15 @@ var field_code : FieldCodeData
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var interact_prompt: Node2D = $"Interact Prompt"
 
+func _ready() -> void:
+	pass
+
 func setup(field_code : FieldCodeData) -> void:
 	self.field_code = field_code
 	sprite_2d.texture = field_code.field_code_icon
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
+	if body.name == "Player" and field_code != null:
 		body.current_interactible = self
 		print("Found a field code")
 		show_prompt()

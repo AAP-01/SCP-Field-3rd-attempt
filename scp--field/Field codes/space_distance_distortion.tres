@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="FieldCodeData" load_steps=2 format=3 uid="uid://c76lfptkgh85h"]
+[gd_resource type="Resource" script_class="FieldCodeData" load_steps=3 format=3 uid="uid://c76lfptkgh85h"]
 
+[ext_resource type="Texture2D" uid="uid://vpysuiaqn7f5" path="res://Assets/Field codes/Space distance distortion SPRITE.png" id="1_7jx36"]
 [ext_resource type="Script" uid="uid://bll7cnu5aggj" path="res://Resources/resource_field_codes.gd" id="1_b8lrs"]
 
 [resource]
 script = ExtResource("1_b8lrs")
 name = "Space/Distance Distortion"
+field_code_icon = ExtResource("1_7jx36")
 metadata/_custom_type_script = "uid://bll7cnu5aggj"
