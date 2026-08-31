@@ -31,30 +31,29 @@ func select_threat() -> void:	# Select the ThreatData resource
 		threat_list.append(SingletonThreatList.list[randi_range(0, SingletonThreatList.list.size() - 1)])	# Only adds the resource
 	
 func setup_threat() -> void:	# Spawn the Threat scene
-	for threat in threat_list:	# To fix: CollisionSHape2D are sized wrong if there are multiple threats spawning
+	for threat in threat_list:	# [FIXED] To fix: CollisionSHape2D are sized wrong if there are multiple threats spawning
 		var spawn_area = select_spawn_area()
 		print(spawn_area.name)
 		
+		var threat_spawn = threat.threat_scene.instantiate()	# Spawns the threat's threat_scene (any scene), so I don't have to do a match case for every type
+		add_child(threat_spawn)
+		
+		# This block sets up the threat's size and position if applicable
 		match threat.threat_class:
 			SingletonEnums.ThreatClass.MOBILE_THREAT:
-				var mobile_threat = AREA_THREAT.instantiate()	# Create an instance in memory (CHANGE TO MOBILE_THREAT WHEN THE CLASS IS ADDED)
-				add_child(mobile_threat)	# Spawn the threat in the scene
-				setup_mobile_threat_position(mobile_threat, spawn_area)	# Set the position
+				setup_mobile_threat_position(threat_spawn, spawn_area)	# Set the position
+				threat_spawn.setup(threat)	# The ThreatData is finally assigned to the threat instance
 				
 			SingletonEnums.ThreatClass.AREA_THREAT:
-				var area_threat = AREA_THREAT.instantiate()
-				add_child(area_threat)
-				setup_area_threat_size(area_threat, spawn_area)
-				area_threat.position = spawn_area.position
+				setup_area_threat_size(threat_spawn, spawn_area)
+				threat_spawn.position = spawn_area.position
+				threat_spawn.setup(threat)	# The ThreatData is finally assigned to the threat instance
 # =====================================================================================================================================================================
 func select_field_codes() -> void:	# Select the FieldCodeData resource among the threat's
 	for i in field_code_amount:	# Choose some field codes
 		var pick = threat_list[0].field_codes[randi_range(0, threat_list[0].field_codes.size() - 1)]
 		field_code_list.append(pick)
 		threat_list[0].field_codes.erase(pick)	# Makes sure it doesn't get picked again
-		
-	for field_code in field_code_list:
-		print(field_code.name)
 		
 func setup_field_codes() -> void:	# Assign the SCPFieldCode nodes to one field code resource each
 	var field_codes_spawned : int = 0

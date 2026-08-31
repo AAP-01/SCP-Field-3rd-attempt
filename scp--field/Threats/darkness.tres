@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ThreatData" load_steps=8 format=3 uid="uid://b2qp178l3yblb"]
+[gd_resource type="Resource" script_class="ThreatData" load_steps=10 format=3 uid="uid://b2qp178l3yblb"]
 
 [ext_resource type="Script" uid="uid://pbh3fclkuvua" path="res://Resources/resource_threats.gd" id="1_jvtu8"]
 [ext_resource type="Script" uid="uid://bll7cnu5aggj" path="res://Resources/resource_field_codes.gd" id="1_ri3bu"]
@@ -7,10 +7,14 @@
 [ext_resource type="Resource" uid="uid://c76lfptkgh85h" path="res://Field codes/space_distance_distortion.tres" id="4_vo51d"]
 [ext_resource type="Resource" uid="uid://bciut78clpvke" path="res://Field codes/stay_in_the_light.tres" id="5_kltk1"]
 [ext_resource type="Resource" uid="uid://cxk7mhx8u8hdh" path="res://Field codes/team_member_vanished_here.tres" id="6_fu2rj"]
+[ext_resource type="PackedScene" uid="uid://crcr4fvnysfth" path="res://Scenes/darkness.tscn" id="8_8pwbw"]
+[ext_resource type="Texture2D" uid="uid://ob43ueu5mfby" path="res://Assets/Characters/darkness SPRITE.png" id="9_vo51d"]
 
 [resource]
 script = ExtResource("1_jvtu8")
 threat_class = 1
+threat_sprite = ExtResource("9_vo51d")
+threat_scene = ExtResource("8_8pwbw")
 name = "Darkness"
 health = 9.223372e+18
 is_invulnerable = true

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://crcr4fvnysfth"]
+
+[ext_resource type="PackedScene" uid="uid://yksripgtgllx" path="res://Scenes/area_threat.tscn" id="1_udca0"]
+[ext_resource type="Script" uid="uid://e3hjw37dktfp" path="res://Scripts/darkness.gd" id="2_4jk3q"]
+
+[node name="Area Threat" instance=ExtResource("1_udca0")]
+script = ExtResource("2_4jk3q")
+
+[node name="Countdown before attacking" type="Timer" parent="." index="2"]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

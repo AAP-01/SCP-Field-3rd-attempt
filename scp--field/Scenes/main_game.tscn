@@ -101,6 +101,7 @@ shape = SubResource("RectangleShape2D_mgc0q")
 position = Vector2(0, 5)
 
 [node name="Player" parent="." instance=ExtResource("1_l756w")]
+z_index = 1
 position = Vector2(24, 609)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
