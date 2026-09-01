@@ -3,13 +3,13 @@
 [ext_resource type="Script" uid="uid://but12kev25ceh" path="res://Scripts/lantern.gd" id="1_q5ajm"]
 
 [sub_resource type="Gradient" id="Gradient_ssfek"]
-offsets = PackedFloat32Array(0.32911393, 1)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+offsets = PackedFloat32Array(0.16033755, 0.33755276, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.327044, 0.327044, 0.327044, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_3b5q5"]
 gradient = SubResource("Gradient_ssfek")
-width = 128
-height = 128
+width = 192
+height = 192
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 0.5)

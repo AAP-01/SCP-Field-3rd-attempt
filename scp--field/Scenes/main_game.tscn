@@ -83,7 +83,7 @@ radius = 24.0
 script = ExtResource("1_18r40")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.3515629, 0.3515629, 0.35156286, 1)
+color = Color(0.072842635, 0.072842635, 0.072842635, 1)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1

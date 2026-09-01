@@ -3,6 +3,7 @@ extends Node2D
 class_name Threat
 
 var threat : ThreatData
+var threat_name : String
 var health : float
 var is_invulnerable : bool
 var speed : float
@@ -12,6 +13,7 @@ var damage : float
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
 func setup(threat : ThreatData) -> void:
+	threat_name = threat.name
 	self.threat = threat
 	self.health = threat.health
 	self.is_invulnerable = threat.is_invulnerable
