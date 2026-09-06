@@ -98,6 +98,7 @@ position = Vector2(920, 600)
 shape = SubResource("RectangleShape2D_mgc0q")
 
 [node name="Interact Prompt" parent="Extraction Point" instance=ExtResource("3_mgc0q")]
+z_index = 2
 position = Vector2(0, 5)
 
 [node name="Player" parent="." instance=ExtResource("1_l756w")]

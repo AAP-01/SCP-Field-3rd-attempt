@@ -12,6 +12,8 @@ func _physics_process(delta: float) -> void:
 	process_movement(delta)
 	move_and_slide()	# Executes the player's movement (uses the velocity variable)
 	interact()
+	
+	die()
 
 func process_movement(delta : float) -> void:
 	# Gravity
@@ -30,3 +32,10 @@ func interact() -> void:
 	if SingletonGameStats.in_interactible_zone:
 		if Input.is_action_just_pressed("Interact"):
 			current_interactible.interact()
+			
+func die() -> void:
+	if SingletonPlayerStats.health <= 0:
+		get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+		# Disable movement
+		# Play death animation
+		# Alert Game Manager

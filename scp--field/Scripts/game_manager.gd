@@ -79,3 +79,7 @@ func setup_area_threat_size(area_threat : Area2D, spawn_area : Area2D) -> void:
 func setup_mobile_threat_position(mobile_threat : Area2D, spawn_area : Area2D) -> void:
 	mobile_threat.position = spawn_area.position
 # =====================================================================================================================================================================
+func show_death_screen():
+	pass
+	# 1. Move to the game over scene
+	# 2. Overlay death UI over the game

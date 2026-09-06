@@ -27,4 +27,4 @@ func interact() -> void:
 func bring_to_game_over() -> void:
 	print("Extracting")
 	SingletonGameStats.win = true
-	get_tree().call_deferred("change_scene_to_file", "res://Scenes/game_over.tscn")
+	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
