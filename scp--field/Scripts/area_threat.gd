@@ -3,5 +3,7 @@ extends Threat
 
 class_name Area_threat
 
+var is_in_area : bool = false
+
 func move(speed : float) -> void:	# Moves area to area
 	pass

@@ -6,7 +6,6 @@ class_name Darkness
 @onready var attack_speed_timer: Timer = $"Attack Speed"
 @onready var area_threat: Area_threat = $"."
 @onready var lantern = $"../../Player/Lantern"	# It goes back two times because Darkness is a child of Game Manager. Kepp that in mind
-var is_in_area : bool = false
 
 signal darkness_area_entered
 
@@ -27,8 +26,8 @@ func _on_body_exited(body: Node2D) -> void:
 		is_in_area = false
 		darkness_area_entered.emit()
 		
-func attack():
-	if !SingletonPlayerStats.is_light_on and is_in_area:
+func attack() -> void:
+	if !lantern.point_light_2d.enabled and is_in_area:
 		countdown_before_attacking.start()
 	else:
 		countdown_before_attacking.stop()
